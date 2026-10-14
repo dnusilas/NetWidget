@@ -4,6 +4,13 @@ Widget แบบทางการของ macOS แสดงเครือข
 
 ใช้ได้กับ macOS 14 ขึ้นไป
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/widget-dark.png">
+  <img alt="NetWidget ขนาด Small และ Medium" src="docs/widget-light.png" width="614">
+</picture>
+
+<sub>ภาพตัวอย่างขนาด Small และ Medium (ข้อมูลในภาพเป็นข้อมูลสมมติ)</sub>
+
 ## ส่วนประกอบ
 
 | ส่วน | หน้าที่ |
