@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A33B529F65830AEC19D7F9D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785730A59DAC4CCCB658BBBD /* NetworkInfo.swift */; };
+		31B0A3416AAF57BF5E0A6434 /* CopyIPIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18BD81C9224F19B7D0B45E /* CopyIPIntent.swift */; };
+		76D171F4B103A9FC9AE9100D /* NetWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93D22A617B48573ED74A73F /* NetWidgetExtension.swift */; };
+		BAF0B07D0932FF8AF1581FCA /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785730A59DAC4CCCB658BBBD /* NetworkInfo.swift */; };
+		D1419020E21CB611A1875AD8 /* CopyIPIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18BD81C9224F19B7D0B45E /* CopyIPIntent.swift */; };
+		E2C6FD209FBF989E6B5B2336 /* NetWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8128C8CD14BA1895094ABBE1 /* NetWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE4CEFA48413C877F1A2D2E9 /* NetWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809647A69B5B02BC3096C5C0 /* NetWidgetApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69F87A025819733CD81C15B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72F2E495F00867C76B7506A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7320F36076ABB572AE994A7;
+			remoteInfo = NetWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF648052491172A61C41A3AC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E2C6FD209FBF989E6B5B2336 /* NetWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B5C5DD4991B56D0F2069885 /* NetWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetWidget.entitlements; sourceTree = "<group>"; };
+		494FCCA9F99FB76212F0EE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5BA8FE0674039263DB6460D3 /* NetWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetWidgetExtension.entitlements; sourceTree = "<group>"; };
+		6D18BD81C9224F19B7D0B45E /* CopyIPIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyIPIntent.swift; sourceTree = "<group>"; };
+		6FEF9564F4855EC109D602B8 /* NetWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		785730A59DAC4CCCB658BBBD /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		809647A69B5B02BC3096C5C0 /* NetWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWidgetApp.swift; sourceTree = "<group>"; };
+		8128C8CD14BA1895094ABBE1 /* NetWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NetWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A93D22A617B48573ED74A73F /* NetWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWidgetExtension.swift; sourceTree = "<group>"; };
+		AB1511FFC00DDDBFA051138D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		4B08E03DFDFA82FA112669B4 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				494FCCA9F99FB76212F0EE4D /* Info.plist */,
+				5BA8FE0674039263DB6460D3 /* NetWidgetExtension.entitlements */,
+				A93D22A617B48573ED74A73F /* NetWidgetExtension.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		7342E5F4604D559D2C9C9B6E = {
+			isa = PBXGroup;
+			children = (
+				E1DB64019ABF6A06DF0D9633 /* App */,
+				B7CFB009A72D07690BFEF543 /* Shared */,
+				4B08E03DFDFA82FA112669B4 /* Widget */,
+				C583267DE7B61042FAF1B9D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7CFB009A72D07690BFEF543 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6D18BD81C9224F19B7D0B45E /* CopyIPIntent.swift */,
+				785730A59DAC4CCCB658BBBD /* NetworkInfo.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C583267DE7B61042FAF1B9D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FEF9564F4855EC109D602B8 /* NetWidget.app */,
+				8128C8CD14BA1895094ABBE1 /* NetWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1DB64019ABF6A06DF0D9633 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB1511FFC00DDDBFA051138D /* Info.plist */,
+				1B5C5DD4991B56D0F2069885 /* NetWidget.entitlements */,
+				809647A69B5B02BC3096C5C0 /* NetWidgetApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8DA4F975149B98A610A423F /* NetWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07485A764E19D805DC32A74E /* Build configuration list for PBXNativeTarget "NetWidget" */;
+			buildPhases = (
+				9A511CAFC52A18B232BDBBCD /* Sources */,
+				DF648052491172A61C41A3AC /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCF0C18EAB6AC28081B84810 /* PBXTargetDependency */,
+			);
+			name = NetWidget;
+			packageProductDependencies = (
+			);
+			productName = NetWidget;
+			productReference = 6FEF9564F4855EC109D602B8 /* NetWidget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7320F36076ABB572AE994A7 /* NetWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4E74412B1961311E4D6CD6 /* Build configuration list for PBXNativeTarget "NetWidgetExtension" */;
+			buildPhases = (
+				7E91D7F6287B8E57DD94B621 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = NetWidgetExtension;
+			productReference = 8128C8CD14BA1895094ABBE1 /* NetWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72F2E495F00867C76B7506A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C8DA4F975149B98A610A423F = {
+						DevelopmentTeam = 5SLTN3V4VW;
+						ProvisioningStyle = Automatic;
+					};
+					D7320F36076ABB572AE994A7 = {
+						DevelopmentTeam = 5SLTN3V4VW;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 245999F630FE03D0A31A2F17 /* Build configuration list for PBXProject "NetWidget" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7342E5F4604D559D2C9C9B6E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C583267DE7B61042FAF1B9D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8DA4F975149B98A610A423F /* NetWidget */,
+				D7320F36076ABB572AE994A7 /* NetWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E91D7F6287B8E57DD94B621 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31B0A3416AAF57BF5E0A6434 /* CopyIPIntent.swift in Sources */,
+				76D171F4B103A9FC9AE9100D /* NetWidgetExtension.swift in Sources */,
+				BAF0B07D0932FF8AF1581FCA /* NetworkInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A511CAFC52A18B232BDBBCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1419020E21CB611A1875AD8 /* CopyIPIntent.swift in Sources */,
+				EE4CEFA48413C877F1A2D2E9 /* NetWidgetApp.swift in Sources */,
+				2A33B529F65830AEC19D7F9D /* NetworkInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCF0C18EAB6AC28081B84810 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7320F36076ABB572AE994A7 /* NetWidgetExtension */;
+			targetProxy = 69F87A025819733CD81C15B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		42627B3BFE78637FE5344146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5SLTN3V4VW;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5211CA50931BB2A65976870A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/NetWidgetExtension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danusil.netwidget.widget;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		81E3BDF52C1FCEA385D059AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5SLTN3V4VW;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		907EAB55E0B49EF3A03D95A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/NetWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danusil.netwidget;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ADA467559AD475CFA6FCDC39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/NetWidgetExtension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danusil.netwidget.widget;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BE6DBA7C91417CC7DCD0AA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/NetWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danusil.netwidget;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07485A764E19D805DC32A74E /* Build configuration list for PBXNativeTarget "NetWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907EAB55E0B49EF3A03D95A4 /* Debug */,
+				BE6DBA7C91417CC7DCD0AA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		245999F630FE03D0A31A2F17 /* Build configuration list for PBXProject "NetWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81E3BDF52C1FCEA385D059AC /* Debug */,
+				42627B3BFE78637FE5344146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3B4E74412B1961311E4D6CD6 /* Build configuration list for PBXNativeTarget "NetWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA467559AD475CFA6FCDC39 /* Debug */,
+				5211CA50931BB2A65976870A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72F2E495F00867C76B7506A9 /* Project object */;
+}

@@ -1,0 +1,63 @@
+name: NetWidget
+options:
+  bundleIdPrefix: com.danusil
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: 5SLTN3V4VW
+
+targets:
+  NetWidget:
+    type: application
+    platform: macOS
+    sources: [App, Shared]
+    dependencies:
+      - target: NetWidgetExtension
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: NetWidget
+        LSUIElement: true
+        AppGroupID: $(TeamIdentifierPrefix)com.danusil.netwidget
+        NSLocationUsageDescription: macOS requires Location access to read the Wi-Fi network name (SSID).
+        NSLocationWhenInUseUsageDescription: macOS requires Location access to read the Wi-Fi network name (SSID).
+    entitlements:
+      path: App/NetWidget.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - $(TeamIdentifierPrefix)com.danusil.netwidget
+        com.apple.security.personal-information.location: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.danusil.netwidget
+        ENABLE_HARDENED_RUNTIME: YES
+
+  NetWidgetExtension:
+    type: app-extension
+    platform: macOS
+    sources: [Widget, Shared]
+    info:
+      path: Widget/Info.plist
+      properties:
+        CFBundleDisplayName: NetWidget
+        AppGroupID: $(TeamIdentifierPrefix)com.danusil.netwidget
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: Widget/NetWidgetExtension.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.application-groups:
+          - $(TeamIdentifierPrefix)com.danusil.netwidget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.danusil.netwidget.widget
+        ENABLE_HARDENED_RUNTIME: YES
