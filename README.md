@@ -70,3 +70,7 @@ killall NetWidget NetWidgetExtension chronod 2>/dev/null; open /Applications/Net
 - macOS คุมหน้าตาพื้นหลัง ความใส และขอบโค้งเอง และจะทำให้ widget ดูซีดลงตอนมีหน้าต่างอื่นอยู่ข้างหน้า
 - เลือกขนาดได้แค่ Small และ Medium
 - ความถี่ในการอัปเดตขึ้นกับ macOS แอปหลักช่วยสั่งอัปเดตทันทีตอนเครือข่ายเปลี่ยน
+
+## License
+
+[MIT](LICENSE)
