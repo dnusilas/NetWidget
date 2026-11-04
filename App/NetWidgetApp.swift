@@ -7,47 +7,26 @@ import ServiceManagement
 
 @main
 struct NetWidgetApp: App {
-    @StateObject private var monitor = NetworkMonitor()
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
+    // No menu bar icon or window: the app only runs in the background to keep the widget up to date.
     var body: some Scene {
-        MenuBarExtra {
-            MenuContent(monitor: monitor)
-        } label: {
-            Image(systemName: monitor.snapshot.interfaces.isEmpty ? "wifi.slash" : "network")
-        }
+        Settings { EmptyView() }
     }
 }
 
-struct MenuContent: View {
-    @ObservedObject var monitor: NetworkMonitor
-    @State private var openAtLogin = SMAppService.mainApp.status == .enabled
+@MainActor
+final class AppDelegate: NSObject, NSApplicationDelegate {
+    private var monitor: NetworkMonitor?
 
-    var body: some View {
-        if monitor.snapshot.interfaces.isEmpty {
-            Text("Not connected")
-        }
-        ForEach(monitor.snapshot.interfaces) { iface in
-            Button("\(iface.isPrimary ? "● " : "")\(iface.title) — \(iface.ip)") { copy(iface.ip) }
-        }
-        if let pub = monitor.snapshot.publicIP {
-            Divider()
-            Button("Public IP — \(pub)") { copy(pub) }
-        }
-        Divider()
-        Button("Refresh") { monitor.refresh(includePublic: true, force: true) }
-        Toggle("Open at Login", isOn: $openAtLogin)
-            .onChange(of: openAtLogin) { _, enabled in
-                LoginItem.set(enabled)
-                openAtLogin = SMAppService.mainApp.status == .enabled
-            }
-        Divider()
-        Button("Quit NetWidget") { NSApp.terminate(nil) }
-            .keyboardShortcut("q")
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        monitor = NetworkMonitor()
     }
 
-    private func copy(_ text: String) {
-        NSPasteboard.general.clearContents()
-        NSPasteboard.general.setString(text, forType: .string)
+    // Opening the app again while it is running forces a refresh.
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        monitor?.refresh(includePublic: true, force: true)
+        return false
     }
 }
 
@@ -71,8 +50,8 @@ enum LoginItem {
 }
 
 @MainActor
-final class NetworkMonitor: NSObject, ObservableObject, CLLocationManagerDelegate {
-    @Published private(set) var snapshot = SharedStore.load() ?? .empty
+final class NetworkMonitor: NSObject, CLLocationManagerDelegate {
+    private(set) var snapshot = SharedStore.load() ?? .empty
 
     private let pathMonitor = NWPathMonitor()
     private let location = CLLocationManager()

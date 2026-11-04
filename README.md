@@ -15,7 +15,7 @@ Widget แบบทางการของ macOS แสดงเครือข
 
 | ส่วน | หน้าที่ |
 |---|---|
-| **NetWidget.app** (แอปหลัก) | อยู่ใน menu bar คอยดูว่าเครือข่ายเปลี่ยนไหม อ่านชื่อ Wi-Fi และดึง Public IP แล้วสั่งให้ widget อัปเดตทันที ตั้งให้เปิดเองตอน login ไว้ตั้งแต่เปิดครั้งแรก |
+| **NetWidget.app** (แอปหลัก) | ทำงานเบื้องหลังโดยไม่มีไอคอนใน menu bar หรือ Dock คอยดูว่าเครือข่ายเปลี่ยนไหม อ่านชื่อ Wi-Fi และดึง Public IP แล้วสั่งให้ widget อัปเดตทันที ตั้งให้เปิดเองตอน login ไว้ตั้งแต่เปิดครั้งแรก |
 | **NetWidgetExtension** (ตัว widget) | แสดงผลบน desktop มี 2 ขนาด คือ Small (เครือข่ายหลัก + Public IP) และ Medium (สูงสุด 3 เครือข่าย + Public IP) |
 | **App Group** | พื้นที่เก็บข้อมูลที่แอปหลักกับ widget ใช้ร่วมกัน |
 
@@ -25,7 +25,7 @@ Widget แบบทางการของ macOS แสดงเครือข
 NetWidgetKit/
 ├── project.yml                 # ไฟล์ตั้งค่า XcodeGen ใช้สร้าง NetWidget.xcodeproj
 ├── NetWidget.xcodeproj
-├── App/NetWidgetApp.swift      # แอปหลัก (menu bar)
+├── App/NetWidgetApp.swift      # แอปหลัก (ทำงานเบื้องหลัง)
 ├── Widget/NetWidgetExtension.swift  # ตัว widget
 └── Shared/                     # โค้ดที่ทั้งสองส่วนใช้ร่วมกัน
     ├── NetworkInfo.swift       # อ่านข้อมูลเครือข่าย, Public IP, App Group
@@ -48,7 +48,9 @@ NetWidgetKit/
 ## การใช้งาน
 
 - **บน widget:** กดที่ IP เพื่อ copy จะขึ้น ✓ และคำว่า "Copied" ราว 2 วินาที
-- **ใน menu bar (ไอคอน 🌐):** กดที่ IP เพื่อ copy, กด **Refresh** เพื่ออัปเดตทันที, เปิด/ปิด **Open at Login** หรือ **Quit**
+- **อัปเดตทันที:** เปิด NetWidget.app ซ้ำอีกครั้ง (เช่น ดับเบิลคลิกใน Applications) แอปจะดึงข้อมูลใหม่และสั่งให้ widget อัปเดต
+- **ปิด/เปิดตอน login:** ไปที่ **System Settings → General → Login Items** แล้วเปิดหรือปิด NetWidget
+- **ปิดแอปหลัก:** ใช้ Activity Monitor หรือรัน `killall NetWidget`
 - ถ้าปิดแอปหลัก widget ยังแสดงผลได้ แต่จะอัปเดตช้าลง ประมาณทุก 15 นาทีหรือตามที่ macOS กำหนด และอาจไม่มีชื่อ Wi-Fi
 
 ## แก้โค้ดแล้ว build ใหม่
